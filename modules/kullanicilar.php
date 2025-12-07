@@ -1,0 +1,1 @@
+<?php // modules/kullanicilar.php ?><div class="p-8"><h1 class="text-3xl font-bold">Kullanıcılar</h1><p>Kullanıcılar modülü yakında eklenecek.</p></div>
