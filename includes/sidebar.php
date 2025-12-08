@@ -1,156 +1,139 @@
-<!-- includes/sidebar.php -->
-<aside class="w-72 bg-white fixed h-full p-6 shadow-2xl z-50 overflow-y-auto">
-    <div class="text-3xl font-extrabold text-violet-700 mb-10 tracking-wide border-b pb-4">
-        AESTHETICA <span class="text-gray-900">PMS</span>
+<?php
+// includes/sidebar.php
+?>
+<!-- Sidebar -->
+<aside class="fixed top-0 left-0 w-72 h-screen bg-white border-r border-gray-200 shadow-lg z-40">
+    <div class="p-6 border-b">
+        <div class="flex items-center space-x-3">
+            <div class="flat-icon-styled">
+                <i class="fas fa-hotel"></i>
+            </div>
+            <div>
+                <h2 class="text-xl font-bold text-gray-900">Aesthetica PMS</h2>
+                <p class="text-xs text-gray-500">Otel Yönetim Sistemi</p>
+            </div>
+        </div>
     </div>
-
-    <nav class="space-y-6">
-        <!-- OTEL OPERASYON -->
-        <div>
-            <h3 class="text-xs uppercase font-bold text-gray-400 mb-3 ml-2">OTEL OPERASYON</h3>
-            <a href="/admin/modules/dashboard.php" class="flex items-center p-3 rounded-xl hover:bg-gray-50 text-gray-700 transition duration-200">
-                <div class="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center mr-3">
-                    <i class="fas fa-chart-line text-gray-500"></i>
-                </div>
-                <span class="text-sm font-medium">Dashboard</span>
-            </a>
-            <a href="/admin/modules/rezervasyonlar.php" class="flex items-center p-3 rounded-xl hover:bg-gray-50 text-gray-700 transition duration-200">
-                <div class="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center mr-3">
-                    <i class="fas fa-bookmark text-gray-500"></i>
-                </div>
-                <span class="text-sm font-medium">Rezervasyonlar</span>
-            </a>
-        </div>
-
-        <!-- ODA VE MÜŞTERİ -->
-        <div>
-            <h3 class="text-xs uppercase font-bold text-gray-400 mb-3 ml-2">ODA VE MÜŞTERİ</h3>
-            <a href="/admin/modules/odalar.php" class="flex items-center p-3 rounded-xl hover:bg-gray-50 text-gray-700 transition duration-200">
-                <div class="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center mr-3">
-                    <i class="fas fa-bed text-gray-500"></i>
-                </div>
-                <span class="text-sm font-medium">Odalar</span>
-            </a>
-            <a href="/admin/modules/musteriler.php" class="flex items-center p-3 rounded-xl hover:bg-gray-50 text-gray-700 transition duration-200">
-                <div class="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center mr-3">
-                    <i class="fas fa-users text-gray-500"></i>
-                </div>
-                <span class="text-sm font-medium">Müşteriler</span>
-            </a>
-        </div>
-        
-        <!-- BLOG MODÜLÜ -->
-        <div>
-            <h3 class="text-xs uppercase font-bold text-gray-400 mb-3 ml-2">BLOG YÖNETİMİ</h3>
-            
-            <a href="/admin/modules/blog.php" class="flex items-center p-3 rounded-xl hover:bg-gray-50 text-gray-700 transition duration-200">
-                <div class="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center mr-3">
-                    <i class="fas fa-newspaper text-gray-500"></i>
-                </div>
-                <span class="text-sm font-medium">Tüm Yazılar</span>
-            </a>
-            
-            <a href="/admin/modules/blog-add.php" class="flex items-center p-3 rounded-xl hover:bg-gray-50 text-gray-700 transition duration-200">
-                <div class="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center mr-3">
-                    <i class="fas fa-plus text-gray-500"></i>
-                </div>
-                <span class="text-sm font-medium">Yeni Yazı</span>
-            </a>
-            
-            <a href="/admin/modules/blog-categories.php" class="flex items-center p-3 rounded-xl hover:bg-gray-50 text-gray-700 transition duration-200">
-                <div class="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center mr-3">
-                    <i class="fas fa-folder text-gray-500"></i>
-                </div>
-                <span class="text-sm font-medium">Kategoriler</span>
-            </a>
-            
-            <a href="/admin/modules/blog-tags.php" class="flex items-center p-3 rounded-xl hover:bg-gray-50 text-gray-700 transition duration-200">
-                <div class="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center mr-3">
-                    <i class="fas fa-tags text-gray-500"></i>
-                </div>
-                <span class="text-sm font-medium">Etiketler</span>
-            </a>
+    
+    <div class="p-4">
+        <div class="mb-6">
+            <h3 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">GENEL</h3>
+            <ul class="space-y-2">
+                <li>
+                    <a href="#" data-page="dashboard" class="sidebar-link flex items-center space-x-3 p-3 rounded-xl text-gray-700 hover:bg-indigo-50 hover:text-indigo-700 transition-all duration-200">
+                        <div class="flat-icon-styled">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <span class="font-medium">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-page="rezervasyonlar" class="sidebar-link flex items-center space-x-3 p-3 rounded-xl text-gray-700 hover:bg-indigo-50 hover:text-indigo-700 transition-all duration-200">
+                        <div class="flat-icon-styled">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <span class="font-medium">Rezervasyonlar</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-page="odalar" class="sidebar-link flex items-center space-x-3 p-3 rounded-xl text-gray-700 hover:bg-indigo-50 hover:text-indigo-700 transition-all duration-200">
+                        <div class="flat-icon-styled">
+                            <i class="fas fa-bed"></i>
+                        </div>
+                        <span class="font-medium">Odalar</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-page="musteriler" class="sidebar-link flex items-center space-x-3 p-3 rounded-xl text-gray-700 hover:bg-indigo-50 hover:text-indigo-700 transition-all duration-200">
+                        <div class="flat-icon-styled">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <span class="font-medium">Müşteriler</span>
+                    </a>
+                </li>
+            </ul>
         </div>
         
-        <!-- ÇIKIŞ -->
-        <div class="pt-10 border-t">
-            <a href="/admin/logout.php" class="flex items-center p-3 rounded-xl hover:bg-red-50 text-red-600 transition duration-200">
-                <div class="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center mr-3">
-                    <i class="fas fa-sign-out-alt text-red-500"></i>
+        <div class="mb-6">
+            <h3 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">İÇERİK</h3>
+            <ul class="space-y-2">
+                <li>
+                    <a href="#" data-page="blog" class="sidebar-link flex items-center space-x-3 p-3 rounded-xl text-gray-700 hover:bg-indigo-50 hover:text-indigo-700 transition-all duration-200">
+                        <div class="flat-icon-styled">
+                            <i class="fas fa-blog"></i>
+                        </div>
+                        <span class="font-medium">Blog</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-page="galeri" class="sidebar-link flex items-center space-x-3 p-3 rounded-xl text-gray-700 hover:bg-indigo-50 hover:text-indigo-700 transition-all duration-200">
+                        <div class="flat-icon-styled">
+                            <i class="fas fa-images"></i>
+                        </div>
+                        <span class="font-medium">Galeri</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="mb-6">
+            <h3 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">AYARLAR</h3>
+            <ul class="space-y-2">
+                <li>
+                    <a href="#" data-page="kullanicilar" class="sidebar-link flex items-center space-x-3 p-3 rounded-xl text-gray-700 hover:bg-indigo-50 hover:text-indigo-700 transition-all duration-200">
+                        <div class="flat-icon-styled">
+                            <i class="fas fa-user-cog"></i>
+                        </div>
+                        <span class="font-medium">Kullanıcılar</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-page="hakkimizda" class="sidebar-link flex items-center space-x-3 p-3 rounded-xl text-gray-700 hover:bg-indigo-50 hover:text-indigo-700 transition-all duration-200">
+                        <div class="flat-icon-styled">
+                            <i class="fas fa-info-circle"></i>
+                        </div>
+                        <span class="font-medium">Hakkımızda</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-page="iletisim" class="sidebar-link flex items-center space-x-3 p-3 rounded-xl text-gray-700 hover:bg-indigo-50 hover:text-indigo-700 transition-all duration-200">
+                        <div class="flat-icon-styled">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <span class="font-medium">İletişim</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="mt-8 p-4 bg-indigo-50 rounded-xl">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-full flex items-center justify-center">
+                    <i class="fas fa-question-circle text-white"></i>
                 </div>
-                <span class="text-sm font-medium">Çıkış Yap</span>
+                <div>
+                    <p class="text-sm font-medium text-gray-900">Yardım mı lazım?</p>
+                    <a href="#" class="text-xs text-indigo-600 hover:underline">Dokümantasyona göz atın</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Bottom user info -->
+    <div class="absolute bottom-0 left-0 right-0 p-4 border-t">
+        <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-8 h-8 bg-gradient-to-br from-purple-400 to-indigo-500 rounded-full flex items-center justify-center">
+                    <span class="text-white text-sm font-bold"><?php echo substr($_SESSION['user_name'] ?? 'A', 0, 1); ?></span>
+                </div>
+                <div>
+                    <p class="text-sm font-medium text-gray-900"><?php echo $_SESSION['user_name'] ?? 'Admin'; ?></p>
+                    <p class="text-xs text-gray-500"><?php echo $_SESSION['user_role'] ?? 'Yönetici'; ?></p>
+                </div>
+            </div>
+            <a href="logout.php" class="p-2 text-gray-400 hover:text-red-500 transition-colors">
+                <i class="fas fa-sign-out-alt"></i>
             </a>
         </div>
-    </nav>
+    </div>
 </aside>
-
-<!-- Aktif sayfayı JavaScript ile belirle -->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // 1. Önce mevcut URL'yi al
-    const currentUrl = window.location.pathname;
-    console.log('Mevcut URL:', currentUrl);
-    
-    // 2. Tüm sidebar linklerini al
-    const allLinks = document.querySelectorAll('aside nav a');
-    
-    // 3. Her link için kontrol et
-    allLinks.forEach(link => {
-        const linkUrl = link.getAttribute('href');
-        
-        // Eğer mevcut URL bu linkin URL'sini içeriyorsa
-        if (currentUrl.includes(linkUrl.replace('/admin', ''))) {
-            // Aktif stil ekle
-            link.classList.add('bg-violet-50', 'text-violet-700');
-            link.classList.remove('hover:bg-gray-50', 'text-gray-700');
-            
-            // İkonu da aktif yap
-            const iconDiv = link.querySelector('div.w-8');
-            if (iconDiv) {
-                iconDiv.classList.add('bg-violet-700');
-                iconDiv.classList.remove('bg-gray-100');
-                
-                // İkon rengini beyaz yap
-                const icon = iconDiv.querySelector('i');
-                if (icon) {
-                    icon.classList.add('text-white');
-                    icon.classList.remove('text-gray-500', 'text-red-500');
-                }
-            }
-        }
-    });
-    
-    // 4. Özel durum: Blog ana sayfası
-    if (currentUrl.includes('blog.php') && 
-        !currentUrl.includes('blog-add.php') && 
-        !currentUrl.includes('blog-categories.php') && 
-        !currentUrl.includes('blog-tags.php') &&
-        !currentUrl.includes('blog-edit.php')) {
-        
-        // Tüm Yazılar linkini aktif yap
-        const blogLinks = document.querySelectorAll('aside nav a');
-        blogLinks.forEach(link => {
-            if (link.href.includes('/admin/modules/blog.php') && 
-                !link.href.includes('blog-add.php') &&
-                !link.href.includes('blog-categories.php') &&
-                !link.href.includes('blog-tags.php')) {
-                
-                link.classList.add('bg-violet-50', 'text-violet-700');
-                link.classList.remove('hover:bg-gray-50', 'text-gray-700');
-                
-                const iconDiv = link.querySelector('div.w-8');
-                if (iconDiv) {
-                    iconDiv.classList.add('bg-violet-700');
-                    iconDiv.classList.remove('bg-gray-100');
-                    
-                    const icon = iconDiv.querySelector('i');
-                    if (icon) {
-                        icon.classList.add('text-white');
-                        icon.classList.remove('text-gray-500');
-                    }
-                }
-            }
-        });
-    }
-});
-</script>

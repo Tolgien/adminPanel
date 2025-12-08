@@ -1,7 +1,7 @@
 <?php
 // index.php
 require_once 'config/database.php';
-session_start();
+
 
 // Eğer giriş yapılmamışsa giriş sayfasına yönlendir
 if (!isset($_SESSION['user_id'])) {
@@ -33,14 +33,9 @@ if (!in_array($page, $allowed_pages)) {
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-<!-- Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
 <!-- SweetAlert2 -->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-<!-- Tinymce Editor (blog-add.php ve blog-edit.php için) -->
-<script src="https://cdn.tiny.cloud/1/YOUR_API_KEY/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
     <style>
         body {
             font-family: 'Poppins', sans-serif;
